@@ -1,0 +1,16 @@
+<div class="title">
+<h1><%=@book.title%></h1>
+</div>
+
+<div class="author">
+  <h3>Author: <%=@book.author%></h3> <br/>
+</div>
+<div class="publisher">
+  <h3>Published by:</h3>
+  <ul>
+
+  <%@book.publisher.each do |publisher| %>
+   <li><%=publisher%></li>
+   <%end%>
+ </ul>
+</div>
