@@ -14,3 +14,15 @@
    <%end%>
  </ul>
 </div>
+
+<div class="reviews">
+  <h3>Reviews:</h3>
+  <ul>
+  <%@book.reviews.each do |review| %>
+   <li><%=review[:summary]%><br>
+   Review Publication Date: <%=review[:publication_dt]%></li>
+   <%end%>
+ </ul>
+
+
+</div>

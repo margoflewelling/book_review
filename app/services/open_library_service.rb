@@ -8,7 +8,7 @@ class OpenLibraryService
     author = json[:docs].first[:author_name].first
     title = json[:docs].first[:title]
     publisher = json[:docs].first[:publisher]
-    Book.new(title, author, publisher)
+    {author: author, title: title, publisher: publisher}
   end
 
 

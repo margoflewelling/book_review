@@ -18,15 +18,12 @@ require 'rails_helper'
         expect(page).to have_content("Random House Large Print")
         expect(page).to have_content("Knopf Canada")
       end
+
+      within('.reviews') do
+        expect(page).to have_content("across four years of friendship and occasional romance")
+        expect(page).to have_content("Review Publication Date: 2019-04-08")
+        expect(page).to have_content("also traces a young romance in Ireland.")
+        expect(page).to have_content("Review Publication Date: 2019-04-15")
+      end
     end
   end
-
-
-
-# I should also see:
-# - This book has 2 reviews from the New York Times
-#   (Note: reviews are the "summary" in the book review response)
-# - Review 1: "Rooney's second novel tracks two gifted but troubled teenagers across four years of friendship and occasional romance."
-# Review Publication Date: 2019-04-08
-# - Review 2: "Like "Conversations With Friends," "Normal People" also traces a young romance in Ireland."
-# Review Publication Date: 2019-04-15
