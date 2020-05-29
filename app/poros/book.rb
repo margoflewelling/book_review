@@ -1,5 +1,3 @@
-require './app/services/nyt_service.rb'
-
 class Book
   attr_reader :title, :author, :publisher, :reviews
 
